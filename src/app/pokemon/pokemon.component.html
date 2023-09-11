@@ -1,1 +1,14 @@
-<p>pokemon works!</p>
+<div class="d-flex justify-content-around me-2">
+  
+    <div *ngFor="let pokemon of pokemons" class=" border border-secondary border-3 m-1">
+      <a routerLink="/pokemons/{{pokemon.id}}">
+        <img src="{{ pokemon.picture }}" alt="image de {{ pokemon.name }}" class="m-auto d-block">
+      </a>
+      <h4  class="text-center">{{ pokemon.name }}</h4>
+      <p class="text-center">Types :  {{ pokemon.types }}</p> 
+      
+  
+    </div>
+
+  
+</div>
